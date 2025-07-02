@@ -1,0 +1,79 @@
+Independent description of service function access document link
+
+一.Java platform access
+
+1.Anti addiction of anti platform
+Introduce
+https://open.3839.com/console/docs/#/service/anti/introduce
+Client access
+https://open.3839.com/console/docs/#/service/anti/client_en
+
+2.Pay internal purchase
+Introduce
+https://open.3839.com/console/docs/#/service/pay/introduce
+Client access
+https://open.3839.com/console/docs/#/service/pay/client_en
+Server access
+https://open.3839.com/console/docs/#/service/pay/server_en
+
+3.Paid download
+Introduce
+https://open.3839.com/console/docs/#/service/paid/introduce
+Client access
+https://open.3839.com/console/docs/#/service/paid/client_en
+
+4.Auxs is stronger
+Introduce
+https://open.3839.com/console/docs/#/service/auxs/introduce
+Client access
+https://open.3839.com/console/docs/#/service/auxs/client_en
+
+5.Archives Cloud archiving
+Introduce
+https://open.3839.com/console/docs/#/service/archives/introduce
+Client access
+https://open.3839.com/console/docs/#/service/archives_v2/client_en
+
+6.Login
+Introduce
+https://open.3839.com/console/docs/#/service/login/introduce
+Client access
+https://open.3839.com/console/docs/#/service/login/client_en
+Validate logon
+https://open.3839.com/console/docs/#/service/userCheck/server_en
+
+7.Friend
+Introduce
+https://open.3839.com/console/docs/#/service/im/introduce
+Client access
+https://open.3839.com/console/docs/#/service/im/client_en
+
+8.Pay to unlock DLC
+Introduce
+https://open.3839.com/console/docs/#/service/dlc/introduce
+Client access
+https://open.3839.com/console/docs/#/service/dlc/client_en
+
+9.billboard
+Introduce
+https://open.3839.com/console/docs/#/service/notice/introduce
+Client access
+https://open.3839.com/console/docs/#/service/notice/client_en
+
+9.share
+Introduce
+https://open.3839.com/console/docs/#/service/share/introduce
+Client access
+https://open.3839.com/console/docs/#/service/share/client_en
+
+二.Unity access document
+https://open.3839.com/console/docs/#/service/unity/client_en
+
+三.SDK download (follow the new version)
+https://open.3839.com/docs/#/service/sdk
+
+四.Common problem
+https://open.3839.com/docs/#/service/faq
+
+五.Privacy Compliance Guidelines
+https://open.3839.com/console/docs/#/service/privacy

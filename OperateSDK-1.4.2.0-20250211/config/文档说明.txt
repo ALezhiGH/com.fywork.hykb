@@ -1,0 +1,13 @@
+业务功能配置文件说明：
+1.hykb_anti.ini -- 平台防沉迷
+2.hykb_pay.ini -- 内购
+3.hykb_paid.ini -- 付费下载
+4.hykb_auxs.ini -- 强更
+5.hykb_archive.ini --- 云存档功能
+6.hykb_login.ini -- 登录
+7.hykb_im.ini -- 好友
+8.hykb_dlc.ini -- 付费解锁DLC
+9.hykb_billboard.ini -- 公告
+10.hykb_share.ini -- 分享
+
+
