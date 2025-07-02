@@ -56,9 +56,9 @@ public class HYKBAndroidProjectBuilder : IPostGenerateGradleAndroidProject
         // Debug.Log(manifestContent);
 
         //【加入 资源文件】
-        CopyAsset("hykb_login.ini", path);
-        CopyAsset("hykb_anti.ini", path);
-        CopyAsset("supplierconfig.json", path);
+        CreateAssets("hykb_login.ini", path);
+        CreateAssets("hykb_anti.ini", path);
+        CopyFile("supplierconfig.json", path);
         
         //【确保签名证书文件CERT.RSA打入包体】
         var launcherBuildGradle = Path.Combine(path.Replace("unityLibrary", "launcher"), "build.gradle");
@@ -124,22 +124,48 @@ public class HYKBAndroidProjectBuilder : IPostGenerateGradleAndroidProject
         return nowManifestFile;
     }
 
-    private static void CopyAsset(string thisAssetFile, string rootPath)
+    private static void CreateAssets(string thisAssetFile, string rootPath)
     {
-        var file = Application.dataPath.Replace("Assets", "Packages");
-        file = Path.Combine(file, $"com.fywsdk.hykb@1.4.2/OperateSDK-1.4.2.0-20250211/config/{thisAssetFile}");
-        if (!File.Exists(file))
-        {
-            Debug.Log($"文件不存在:{file}");
-            return;
-        }
-        
         var targetPath = Path.Combine(rootPath, $"src/main/assets/{thisAssetFile}");
      
         //有可能第二次连续打包，已经在缓存里了，不要重复Copy
         if (!File.Exists(targetPath))
         {
-            File.Copy(file, targetPath);
+            File.Create(targetPath);
+        }
+    }
+
+    private static void CopyFile(string thisAssetFile, string rootPath)
+    {
+        string content = null;
+        try
+        {
+            var text = Resources.Load<TextAsset>(thisAssetFile);
+            if (text != null)
+            {
+                content = text.text;
+            }
+        }
+        catch (Exception e)
+        {
+            content = null;
+            Debug.LogError(e.Message);
+            return;
+        }
+
+        if (content != null)
+        {
+            var targetPath = Path.Combine(rootPath, $"src/main/assets/{thisAssetFile}");
+     
+            //有可能第二次连续打包，已经在缓存里了，不要重复Copy
+            if (!File.Exists(targetPath))
+            {
+                File.WriteAllText(targetPath, content);
+            }
+        }
+        else
+        {
+            Debug.Log($"{thisAssetFile} is null");
         }
     }
 }
