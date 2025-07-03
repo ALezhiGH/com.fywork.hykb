@@ -2,10 +2,9 @@
   "name": "com.fywork.hykb",
   "displayName": "Fywork HYKB",
   "version": "1.4.2",
-  "unity": "2021.1",
+  "unity": "2022.1",
   "keywords": [
     "fywork"
   ],
-  "dependencies": {
-  }
+  "description": "\u5c01\u88c5HYKB SDK"
 }
